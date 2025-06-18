@@ -1,4 +1,4 @@
->   - maior que
+/*   -> maior que
   >=  - maior ou igual que
   <   - menor que
   <=  - menor ou igual que
@@ -21,7 +21,7 @@ console.log(10 >= 9) // verdadeiro
 // menor que 
 console.log(10 < 5) // falso
 console.log(10 < 20) // verdadeiro
-21:22:21	 From Samuel Lucas : // menor ou igual 
+// menor ou igual 
 
 console.log(10 <= 10) // verdadeiro
 console.log(10 <= 9) // falso
