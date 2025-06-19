@@ -1,0 +1,24 @@
+{
+  "name": "programacao-js03",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardoflora/pgats-programacao-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricardoflora/pgats-programacao-js/issues"
+  },
+  "homepage": "https://github.com/ricardoflora/pgats-programacao-js#readme",
+  "devDependencies": {
+    "mocha": "^11.6.0"
+  }
+}
