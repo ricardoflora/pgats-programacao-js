@@ -11,10 +11,8 @@ name: 'Execução Manual'
 
 on:
   workflow_dispatch:
-permissions:
-checks: write
-# jobs = tarefas que serão executadas
-contents: read
+
+
 jobs:
   # maquina que o job vai executar
   runs-on: ubuntu-latest
