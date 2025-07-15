@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-     "test": "npx mocha testes --reporter mocha-junit-reporter"
+    "test": "npx mocha testes --reporter mocha-junit-reporter"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/ricardoflora/pgats-programacao-js#readme",
   "devDependencies": {
-    "mocha": "^11.6.0"
+    "mocha": "^11.7.1"
   }
 }
