@@ -33,7 +33,7 @@ jobs:
         run: npm install
 
       - name: Execução dos testes unitários
-        run: npm teste
+        run: npm test
 
       # instalação do yarn
       - name: Instalando Yarn
