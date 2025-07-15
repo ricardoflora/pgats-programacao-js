@@ -27,16 +27,12 @@ jobs:
     with:
       node-version: 22.x
 
-  - name: Instalação das dependências do projeto
-    run: npm install
-
-  - name: Execução dos testes unitários
-    run: npm test
-
   # instalação do yarn
   - name: Instalando Yarn
     run: npm install -g yarn
 
-  # instalação das dependências do projeto
-  - name: Instalando dependências do projeto
+  - name: Instalação das dependências do projeto
     run: yarn
+
+  - name: Execução dos testes unitários
+    run: yarn mocha ./testes/trabalho-final.js
