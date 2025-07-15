@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "mocha --recursive"
+    "test": "mocha -r ts-node/register 'tests/**/*.ts'"
   },
   "repository": {
     "type": "git",
