@@ -14,25 +14,26 @@ on:
 
 
 jobs:
-  # maquina que o job vai executar
-  runs-on: ubuntu-latest
+  unit-tests:
+    # maquina que o job vai executar
+    runs-on: ubuntu-latest
 
-  # passos do script de build
-  steps:
-  # clone do projeto
-  - uses: actions/checkout@v4
+    # passos do script de build
+    steps:
+    # clone do projeto
+    - uses: actions/checkout@v4
 
-  # instalação do node
-  - uses: actions/checkout@v4
-    with:
-      node-version: 22.x
+    # instalação do node
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 22.x
 
-  # instalação do yarn
-  - name: Instalando Yarn
-    run: npm install -g yarn
+    # instalação do yarn
+    - name: Instalando Yarn
+      run: npm install -g yarn
 
-  - name: Instalação das dependências do projeto
-    run: yarn
+    - name: Instalação das dependências do projeto
+      run: yarn
 
-  - name: Execução dos testes unitários
-    run: yarn mocha ./testes/trabalho-final.js
+    - name: Execução dos testes unitários
+      run: yarn mocha ./testes/trabalho-final.js
