@@ -1,52 +1,50 @@
+# CI de Nível 01 - Disparo manual a partir de 1 clique
+
 # nome do nosso 'pipeline'
+
 name: 'Execução Manual'
+# Disparar o pipeline manualmente
 
 # regras de disparo (gatilhos/triggers)
-# gatilho de exec manual = workflow_dispatch
+# gatilho de execução manual = workflow_dispatch
+#
+
 on:
   workflow_dispatch:
 
-    # trabalhos/tarefas dentro do pipeline = jobs
+    # jobs = tarefas que serão executadas
 jobs:
-  unit-tests:
+  # nome do job
+  testes:
+    # maquina que o job vai executar
     runs-on: ubuntu-latest
 
+    # passos do script de build
     steps:
-    # clone do projeto
-    - uses: actions/checkout@v4
-      with:
-        submodules: false
-        clean: true
-        fetch-depth: 0
+      # clone do projeto
+      - uses: actions/checkout@v4
 
-    # instalação do Node.js
-    - uses: actions/setup-node@v4
-      with:
-        node-version: 22.x
+      # instalação do node
+      - uses: actions/checkout@v4
+        with:
+          node-version: 22.x
+      
+      - name: Instalação das dependências do projeto
+        run: npm install
 
-    # instalação do Yarn
-    - name: Instalando Yarn
-      run: npm install -g yarn
+      - name: Execução dos testes unitários
+        run: npm test
 
-    # instalação das dependências
-    - name: Instalando dependências
-      run: yarn
+      # instalação do yarn
+      - name: Instalando Yarn
+        run: npm install -g yarn
 
-    # execução dos testes
-    - name: Executando testes com Mocha
-      run: yarn test:final
+      # instalação das dependências do projeto
+      - name: Instalando dependências do projeto
+        run: yarn
+       
+      # setup playwright
+      - name: Instalando Playwright
+        run: yarn playwright install
 
-    - uses: actions/upload-artifact@v4
-      if: ${{ !cancelled() }}
-      with:
-        name: relatorio
-        path: mochawesome-report/
-
-    # Gera o relatório após os testes
-    - name: Executando Testes E2E
-      run: yarn run e2e
-    - uses: actions/upload-artifact@v4
-      if: ${{ !cancelled() }}
-      with:
-        name: relatorio
-        path: ./playwright-report
+      
