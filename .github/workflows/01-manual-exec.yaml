@@ -36,4 +36,4 @@ jobs:
       run: yarn
 
     - name: Execução dos testes unitários
-      run: yarn mocha ./testes/trabalho-final.js
+      run: yarn mocha ./testes/01-teste.js
