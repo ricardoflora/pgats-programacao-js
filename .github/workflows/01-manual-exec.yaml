@@ -15,7 +15,7 @@ on:
     # jobs = tarefas que serão executadas
 jobs:
   # nome do job
-  e2e-tests:
+  testes:
     # maquina que o job vai executar
     runs-on: ubuntu-latest
 
@@ -28,6 +28,12 @@ jobs:
       - uses: actions/checkout@v4
         with:
           node-version: 22.x
+      
+      - name: Instalação das dependências do projeto
+        run: npm install
+
+      - name: Execução dos testes unitários
+        run: npm test
 
       # instalação do yarn
       - name: Instalando Yarn
@@ -36,11 +42,9 @@ jobs:
       # instalação das dependências do projeto
       - name: Instalando dependências do projeto
         run: yarn
-
+       
       # setup playwright
       - name: Instalando Playwright
         run: yarn playwright install
 
-      # execução dos testes
-      - name: Executando Testes E2E
-        run: yarn run e2e
+      
