@@ -15,7 +15,7 @@ on:
     # jobs = tarefas que serão executadas
 jobs:
   # nome do job
-  testes:
+  test:
     # maquina que o job vai executar
     runs-on: ubuntu-latest
 
