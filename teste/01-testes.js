@@ -9,7 +9,7 @@ import assert from 'node:assert'
 describe ('Testes do Projeto', () => { 
     it (`deve exibir o nome do dog com letras maiúsculas`,)
     it('primeiro teste',() => {
-        assert.strictEqual(exibirNomeDogFormatado('Mimosa'),'Mimosa') 
+        assert.strictEqual(exibirNomeDogFormatado('Mimosa'),'MIMOSA') 
 
     })
 
