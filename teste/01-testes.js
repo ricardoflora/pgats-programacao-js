@@ -15,7 +15,7 @@
 
  */
 import assert from 'node:assert';
-import { exibirNomeDogFormatado } from '../conceitos-js/testes-de-unidade.js'
+import { exibirNomeDogFormatado } from '../conceitos-js/testes-de-unidade.js';
 
 describe('Testes do Projeto', () => {
 
