@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "npx mocha tests/*.test.js --require @babel/register"
-    },
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ricardoflora/pgats-programacao-js.git"
