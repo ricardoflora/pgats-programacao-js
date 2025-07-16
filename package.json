@@ -4,9 +4,6 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-  "scripts": {
-    "test": "node ./node_modules/mocha/bin/mocha"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ricardoflora/pgats-programacao-js.git"
